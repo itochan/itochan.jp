@@ -68,3 +68,5 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+Slim::Engine.set_default_options pretty: true, sort_attrs: false

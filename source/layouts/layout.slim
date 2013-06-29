@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+
+    / Use title if it's in the page YAML frontmatter
+    title
+      = current_page.data.title || "itochan.jp"
+
+    = stylesheet_link_tag "normalize", "all"
+    = javascript_include_tag  "all"
+
+  body class==current_page.data.page_classes
+    = yield
