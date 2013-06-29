@@ -17,3 +17,4 @@ end
 
 gem "slim"
 gem "sass"
+gem "middleman-deploy", "~> 0.0.12"

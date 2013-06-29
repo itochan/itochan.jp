@@ -70,3 +70,10 @@ configure :build do
 end
 
 Slim::Engine.set_default_options pretty: true, sort_attrs: false
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.user = "itochan"
+  deploy.host = "itochan.jp"
+  deploy.path = "/var/www/mm.itochan.jp"
+end
