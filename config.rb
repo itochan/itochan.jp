@@ -75,5 +75,5 @@ activate :deploy do |deploy|
   deploy.method = :rsync
   deploy.user = "itochan"
   deploy.host = "itochan.jp"
-  deploy.path = "/var/www/mm.itochan.jp"
+  deploy.path = "/var/www/itochan.jp"
 end
