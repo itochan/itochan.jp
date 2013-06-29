@@ -103,4 +103,5 @@ DEPENDENCIES
   middleman (~> 3.1.2)
   middleman-livereload (~> 3.1.0)
   ruby18_source_location
+  sass
   slim
