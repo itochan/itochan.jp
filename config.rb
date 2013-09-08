@@ -69,6 +69,8 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
+activate :livereload
+
 Slim::Engine.set_default_options pretty: true, sort_attrs: false
 
 activate :deploy do |deploy|
