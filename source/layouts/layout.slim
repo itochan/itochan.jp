@@ -12,7 +12,9 @@ html
       title itochan
 
     = stylesheet_link_tag "normalize", "style"
-    = yield_content :assets
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Merriweather+Sans"
+    = stylesheet_link_tag "index"
+
     / = javascript_include_tag  "all"
 
     script
