@@ -1,0 +1,7 @@
+h2 Media coverage
+
+ul
+  - data.media.lists.each do |m|
+    li
+      a href="#{m.url}" = m.title
+      img style="padding-left: 10px;" src="http://b.hatena.ne.jp/entry/image/#{m.url}"
