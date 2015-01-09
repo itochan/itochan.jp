@@ -135,7 +135,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  middleman (~> 3.3.7)
+  middleman (= 3.3.7)
   middleman-deploy (~> 1.0.0)
   middleman-livereload (~> 3.4.2)
   ruby18_source_location
