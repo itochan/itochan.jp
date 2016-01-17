@@ -71,11 +71,11 @@ end
 
 activate :livereload
 
-Slim::Engine.set_default_options pretty: true, sort_attrs: false
+Slim::Engine.set_options pretty: true, sort_attrs: false
 
-activate :deploy do |deploy|
-  deploy.method = :rsync
-  deploy.user = "itochan"
-  deploy.host = "itochan.jp"
-  deploy.path = "/var/www/itochan.jp"
-end
+# activate :deploy do |deploy|
+#   deploy.deploy_method = :rsync
+#   deploy.user = "itochan"
+#   deploy.host = "itochan.jp"
+#   deploy.path = "/var/www/itochan.jp"
+# end
