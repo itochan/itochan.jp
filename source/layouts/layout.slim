@@ -13,11 +13,11 @@ html
 
     link rel="shortcut icon" href="favicon.ico"
 
-    = stylesheet_link_tag "normalize", "style"
-    = stylesheet_link_tag "index"
-    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Merriweather+Sans", rel: nil, id: 'gwebfont'
+    = stylesheet_link_tag "normalize", "style", rel: nil, class: 'stylesheet'
+    = stylesheet_link_tag "index", rel: nil, class: 'stylesheet'
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Merriweather+Sans", rel: nil, class: 'stylesheet'
 
-    = javascript_include_tag 'webfont', async: 'async'
+    = javascript_include_tag 'lazyload', async: 'async'
 
     script
       | window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
