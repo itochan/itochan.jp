@@ -42,7 +42,7 @@ configure :build do
 
   activate :asset_hash
 
-  set :slim, { pretty: true, sort_attrs: false }
+  set :slim, format: :html, sort_attrs: false
 end
 
 activate :deploy do |deploy|
