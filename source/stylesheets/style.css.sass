@@ -24,9 +24,12 @@ h1
 span.label
   font-weight: bold
 
-div#about ul, div#links ul, div#accounts ul
+div.lists ul
   list-style: none
   padding-left: 0
+
+  li:not(:first-of-type)
+    margin-top: 4px
 
   span.services
     @extend span.label
