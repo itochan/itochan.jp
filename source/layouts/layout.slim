@@ -14,11 +14,12 @@ html lang="en"
 
     link rel="shortcut icon" href="favicon.ico"
 
-    = stylesheet_link_tag "normalize", "style", rel: nil, class: 'stylesheet'
-    = stylesheet_link_tag "index", rel: nil, class: 'stylesheet'
-    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Merriweather+Sans", rel: nil, class: 'stylesheet'
+    = javascript_include_tag 'loadCSS'
 
-    = javascript_include_tag 'lazyload', async: 'async'
+    script
+      - %w(normalize.css style.css index.css \
+        https://fonts.googleapis.com/css?family=Merriweather+Sans ).each do |css|
+        | loadCSS('#{asset_path(:css, css.strip)}');
 
     script
       | window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
