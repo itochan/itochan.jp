@@ -17,7 +17,7 @@ html lang="en"
     = javascript_include_tag 'loadCSS'
 
     script
-      - %w(style.css index.css \
+      - %w(style.css \
         https://fonts.googleapis.com/css?family=Merriweather+Sans ).each do |css|
         | loadCSS('#{asset_path(:css, css.strip)}');
 
