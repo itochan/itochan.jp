@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/itochan
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://itochan.jp
+  * I am itochan (https://keybase.io/itochan) on keybase.
+  * I have a public key with fingerprint E38C 719B 6784 50D6 0CF7  CA71 2E38 9FCD 49D9 46F3
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101e76ef7db9a968bba1931ab623d69b5264f5a56a62cf19668be395435cce97ec50a",
+            "fingerprint": "e38c719b678450d60cf7ca712e389fcd49d946f3",
+            "host": "keybase.io",
+            "key_id": "2e389fcd49d946f3",
+            "kid": "0101e76ef7db9a968bba1931ab623d69b5264f5a56a62cf19668be395435cce97ec50a",
+            "uid": "21114633e29526feb75a8836e8646319",
+            "username": "itochan"
+        },
+        "service": {
+            "hostname": "itochan.jp",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1470888024,
+    "expire_in": 157680000,
+    "prev": "493ed4e1cf238b1dd1e35f524ebba3b7834cf73dd703a2da995423dd0dd083ff",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtUmtQlFUY3gUjIDGUAKeLTZ8INeLy3S9LcpHYGcih1YIuUMt3OR987rK77H6C
+aFtNFApDLtIAbZSNWGhSTgUqhASEscltIlQIsSxSzMbZmYhQMOqs1Y9m+tmZM3Pm
+fc/zPO/7PufUhAVqArQ69p3hjG8Ms9rBnwTNky3Xc3chgk0qQ/S7EDO4dQCLBJyq
+yaxIiB5BMRQDDA1kRhI4nqNZQeAxjsB4gcYJieYECqdJmeIpmqdxUcY4GkIAwVEk
+QYki4BggUiiPxCOyYi0ADrtDsapQFhCsyGCcQDMsSaESjYoyI/IMhsMLThYlkpM4
+kpYJSCy0Of0M2JzAO4FOscEcDEy32vsP/P/c9/a/6mAYRtIEAXAOEmUgMBTPsgQN
+WBqmMc4PdAKHlS8CEK2oNrGQtyKueAQmSxQR+H31D/JvgG6bHRLtDhsMbRaYL1RV
+u1Pv56lldj+wFAimvyVMgmKVoImQUQIcTsVmRfQYRIqq4tfESAZlWRbFyXgE7LAr
+DmBS/AiKoVkULn8dUAIlSY4AEgkwUc7GCVbAJAkDBCVTOAmgR4TAsAQJX4OQJAYl
+eFziOWgK9ExC4WYJWUb8UxVbbYgellL5AqjpVAqsvLrdARBXaGXAvcs02gBN0G0B
+/u+lCQ0J/+fPdW67c4n2hvkCys+FVV3Wnn0l9lR978OWq8xUa8yz3hZfq890TPx2
+y+KexbqhLzdn9uRMkfdcylV7gvrVq2duzy+onGmqf5ltiH703PGu3etqDfN5M2+l
+XktMC66KKU/9PZea1U+MpO8fqqxW2nWrg/p88858TaUhK27/jaOlSc2nGkcTVqzz
+RaYefNyw8f4jg3H971547HV3f0TCH19N1W4srd8z4IisSY/umrxBrwjeV5iW6p0d
+WRvaRS+KXMYTDs/Nza2Xit2xMUWdHa81mwLvM7o9dURRWXYwVdS1UJ+8+rfYn3HH
+locMSS+EplW8Hbtj/vOkYwc4z+nRGO+KLoNv5MPR/OFNbReXXWuttlrGY415x9OS
+GzYkDGfOHWprjlxf1bSzLwt/f+zXzsQTE+vLj+ry3NENamPmiymjb3Y/U0N+X3L+
+0+EHzRHZxvC5fYcrx/T6C89bVmb2rVllf6NXfsm8dqz7C8/Aku7wHcLWpxJT0mYy
+O65U8M8dPBL2CJoc8rS5u9f7S9KCx7LV40QX5k7srtN6M4rd141nPphqvDlmvFxh
+/MG8Zrotgo7qWBl0IDi1ubc2eH5pPMtFZF8ZC3+g71DOdHXk6YackxPEyffKFz4O
+jVpI+W50+d709q9bzla7J5u6d7r2xt01Nx6YFzWwqufVocEfP/nMdX5DY662YHr5
+ZPt0yMWBuz9y/Qk=
+=rh/s
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/itochan
+
+==================================================================
