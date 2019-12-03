@@ -14,14 +14,8 @@ html lang="en"
 
     link rel="shortcut icon" href="favicon.ico"
 
-    = javascript_include_tag 'loadCSS', defer: true
-
-    script defer="defer"
-      | window.addEventListener('load', function() {
-      - %w(style.css \
-        https://fonts.googleapis.com/css?family=Merriweather+Sans ).each do |css|
-        | loadCSS('#{asset_path(:css, css.strip)}');
-      | }, false);
+    = stylesheet_link_tag "style"
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Merriweather+Sans"
 
     script
       | window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
