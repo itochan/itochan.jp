@@ -16,3 +16,5 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-minify-html'
 
 gem 'slim'
+
+gem "webrick", "~> 1.7"
