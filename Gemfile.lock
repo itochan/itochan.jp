@@ -103,7 +103,7 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
-    webrick (1.7.0)
+    webrick (1.8.0)
     zeitwerk (2.5.1)
 
 PLATFORMS
@@ -115,7 +115,7 @@ DEPENDENCIES
   slim (~> 4.1)
   tzinfo-data
   wdm (~> 0.1)
-  webrick (~> 1.7)
+  webrick (~> 1.8)
 
 BUNDLED WITH
    2.2.15
