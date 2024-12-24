@@ -7,4 +7,4 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw, :x64_mingw]
 
 gem "slim", "~> 4.1"
 
-gem "webrick", "~> 1.8"
+gem "webrick", "~> 1.9"
