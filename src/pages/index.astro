@@ -1,17 +1,82 @@
 ---
+import Layout from '../layouts/Layout.astro';
 
+const lastModified = new Date().toISOString();
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <div class="container">
+    <h1>itochan</h1>
+
+    <div class="lists">
+      <h2>About</h2>
+      <ul id="introduction">
+        <li>
+          <span class="label">Name: </span>Kazunori Jo
+          <br />
+          a.k.a. i315, itochan315, いとおちゃん, いとお
+        </li>
+        <li>
+          <span class="label">Birthday: </span>March 15
+          <a href="https://amzn.to/kudasai">Wishlist</a>
+        </li>
+        <li>
+          <span class="label">Living: </span>Tokyo, Japan
+        </li>
+        <li>
+          <span class="label">Like: </span>Going to university, Programming, Finance
+        </li>
+      </ul>
+    </div>
+
+    <div class="lists">
+      <h2>Accounts</h2>
+      <ul>
+        <li>
+          <span class="label">GitHub</span>
+          <br />
+          <a href="https://github.com/itochan">itochan</a>
+        </li>
+        <li>
+          <span class="label">Speaker Deck</span>
+          <br />
+          <a href="https://speakerdeck.com/itochan">itochan</a>
+        </li>
+        <li>
+          <span class="label">Mail</span>
+          <br />
+          <a href="mailto:itochan315@gmail.com">itochan315@gmail.com</a>
+        </li>
+        <li>
+          <a href="https://qiita.com/itochan">Qiita</a>
+        </li>
+      </ul>
+
+      <div class="lists">
+        <h2>Links</h2>
+
+        <ul>
+          <li>
+            <a href="/domains">Domains</a>
+          </li>
+          <li>
+            <a href="/media">Media</a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a href="https://itochan.hateblo.jp/">Blog</a>
+          </li>
+          <li>
+            <a href="https://itochan.hatenablog.com/">Blog (tech)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <small>Last Modified: {lastModified}</small>
+    </div>
+  </div>
+</Layout>
