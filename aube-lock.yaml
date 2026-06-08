@@ -6,7 +6,6 @@ settings:
 
 time:
   astro@6.4.4: 2026-06-03T17:37:01.753Z
-  sass@1.100.0: 2026-05-22T00:37:34.033Z
 
 importers:
 
@@ -15,10 +14,6 @@ importers:
       astro:
         specifier: 6.4.4
         version: 6.4.4(picomatch@4.0.4)(rollup@4.61.1)(sass@1.100.0)(vite@7.3.5(sass@1.100.0))
-    devDependencies:
-      sass:
-        specifier: ^1.100.0
-        version: 1.100.0
 
 packages:
 
