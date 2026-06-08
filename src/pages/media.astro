@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const media = (await getCollection('media')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout title="Media">
+  <h2>Media coverage</h2>
+
+  <ul id="media">
+    {
+      media.map((m) => (
+        <li>
+          <a href={m.data.url}>{m.data.title}</a>
+          <img src={`https://b.hatena.ne.jp/entry/image/${m.data.url}`} />
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

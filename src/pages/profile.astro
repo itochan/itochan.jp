@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Profile">
+  <div class="container">
+    <div id="title">
+      <h1>Profile</h1>
+    </div>
+
+    <h2>Who</h2>
+    <ul style="list-style: none">
+      <li>Name: Kazunori Jo</li>
+      <li>Birthday: 1997/03/15 (unix time: 858351600)</li>
+      <li>
+        Kudasai:
+        <a href="https://amzn.to/kudasai">https://amzn.to/kudasai</a>
+      </li>
+      <li>
+        Amazon.co.jp:
+        <a href="https://amzn.to/9DMXk9">itochan-22</a>
+      </li>
+    </ul>
+
+    <h2>NG words</h2>
+    <p>これを目にしたり耳にすると死にます(順次更新中)</p>
+    <ul>
+      <li>浴衣</li>
+      <li>夏</li>
+      <li>祭り</li>
+      <li>映画</li>
+      <li>
+        <code>{`ruby -e 'puts "#{(Time.now - Time.local(1997, 3, 15, 0, 0, 0)).divmod(60 * 60 * 24 * 365)[0]}歳で彼女"'`}</code>
+      </li>
+      <li>高嶺の花</li>
+      <li>スリッパ</li>
+      <li>道東</li>
+      <li>さいたま市</li>
+      <li>東京ディズニーリゾート</li>
+      <li>東京ディズニーランド</li>
+      <li>東京ディズニーシー</li>
+      <li>読者モデル</li>
+      <li>東京湾アクアライン</li>
+      <li>高潮による浸水被害</li>
+      <li>東葛西地域</li>
+      <li>浦安市</li>
+      <li>夢</li>
+      <li>ライラックの花言葉</li>
+      <li>同じクラスの女友達</li>
+      <li>千葉県 16歳高校生</li>
+      <li>クリスマスデート</li>
+      <li>街はイルミネーション</li>
+      <li>相思相愛</li>
+      <li>女子高生に課金</li>
+      <li>ネックウォーマー</li>
+    </ul>
+  </div>
+</Layout>

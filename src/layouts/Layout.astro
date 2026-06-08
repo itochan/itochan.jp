@@ -1,0 +1,31 @@
+---
+import { Font } from 'astro:assets';
+import '../styles/style.css';
+
+interface Props {
+  title?: string;
+  bodyClass?: string;
+}
+
+const { title, bodyClass } = Astro.props;
+const pageTitle = title ? `${title} - itochan` : 'itochan';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="itochan,いとおちゃん,itochan315,i315,城一統" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+    <meta name="theme-color" content="#d3f0fe" />
+
+    <title>{pageTitle}</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <Font cssVariable="--font-merriweather-sans" preload />
+  </head>
+
+  <body class={bodyClass}>
+    <slot />
+  </body>
+</html>
