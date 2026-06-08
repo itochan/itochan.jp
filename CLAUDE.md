@@ -4,29 +4,38 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal static website for itochan (itochan.jp), built with [Middleman](https://middlemanapp.com/). Pages are written in Slim templates, styles in Sass. Ruby 3.0.7 (see `.ruby-version`).
+Personal static website for itochan (itochan.jp), built with [Astro](https://astro.build/) v6. Pages are `.astro` components, styles in Sass. The package manager is [aube](https://aube.en.dev) (`aubr` = `aube run`, `aubx` = `aube dlx`); the lockfile is `aube-lock.yaml`.
 
 ## Commands
 
 ```sh
-bundle install              # install gems
-bundle exec middleman serve # local dev server (http://localhost:4567), live reload
-bundle exec middleman build # build static site into build/ (asset hashing enabled)
+aube install     # install dependencies (lockfile: aube-lock.yaml)
+aubr dev         # local dev server (http://localhost:4321), HMR
+aubr build       # build static site into dist/ (asset hashing built in)
+aubr preview     # serve the built dist/ locally
 ```
 
-There is no test suite or linter configured.
+There is no test suite or linter configured. `aubr astro sync` regenerates content/types after editing collections.
+
+Note: aube blocks dependency build scripts by default. Approved builds are recorded under `aube.allowBuilds` in `package.json` (currently `esbuild`, `sharp`, `@parcel/watcher`); run `aube approve-builds` if a new dependency needs one.
 
 ## Architecture
 
-- `config.rb` — Middleman configuration. Autoprefixer is active (last 2 browser versions); asset hashing runs only on `build`. XML/JSON/TXT pages render without a layout.
-- `source/` — all site content. Built output goes to `build/` (gitignored).
-  - `source/layouts/layout.slim` — the single shared layout (sets `<title>` from page frontmatter `title`, loads Google Analytics).
-  - `source/*.html.slim` — one file per page (`index`, `domains`, `media`, `profile`, `more`). YAML frontmatter at the top sets `title` and optional `page_classes` (applied to `<body>`).
-  - `source/stylesheets/style.css.sass` — main stylesheet (plus `normalize.css`).
-- `data/media.yml` — structured data loaded in templates via `data.media.*` (see `source/media.html.slim` iterating `data.media.lists`).
+- `astro.config.mjs` — Astro config. Configures the **Fonts API** (`fontProviders.google()` for "Merriweather Sans", exposed as `--font-merriweather-sans`). Build output is the default `dist/` with directory-format clean URLs (`/domains`, not `/domains.html`); assets are hashed automatically.
+- `src/`
+  - `src/layouts/Layout.astro` — the single shared layout. Takes a `title` prop (sets `<title>` to `"{title} - itochan"`, or just `itochan` when absent) and optional `bodyClass`. Renders the font via `<Font cssVariable="--font-merriweather-sans" />` and imports the global styles.
+  - `src/pages/*.astro` — one file per page (`index`, `domains`, `media`, `more`, `profile`). Each imports `Layout` and passes `title`.
+  - `src/styles/style.sass` — main stylesheet (plus `normalize.css`). Heading font references `var(--font-merriweather-sans)`.
+  - `src/content.config.ts` + `src/data/media.json` — the `media` Content Collection (`file()` loader + Zod schema). `media.astro` reads it via `getCollection('media')`.
+- `public/` — served verbatim: `favicon.ico`, `robots.txt`, `keybase.txt`, `images/`, and `_redirects` (301s from the old Middleman `*.html` URLs to the clean URLs).
 
-When adding a page, create `source/<name>.html.slim` with frontmatter; link it from `source/index.html.slim`.
+When adding a page, create `src/pages/<name>.astro` importing `Layout`; link it from `src/pages/index.astro` with a clean URL.
 
 ## Deployment
 
-Deployed via Cloudflare Pages (`bundle exec middleman build` → `build/`), served at the custom domain in `CNAME` (itochan.jp). The deploy is configured in the Cloudflare dashboard, not in this repo. Dependabot updates Bundler dependencies daily (`.github/dependabot.yml`); the bulk of recent history is these dependency-bump PRs.
+Deployed via Cloudflare Pages (Git integration: push to `master` → auto build), served at the custom domain in `CNAME` (itochan.jp). The deploy is configured in the Cloudflare dashboard, not in this repo:
+
+- **Build command**: `npm install -g --ignore-scripts=false @endevco/aube && aube ci && aube run build` (installs aube in CI, then clean-installs from `aube-lock.yaml` and builds)
+- **Build output directory**: `dist`
+
+`public/_redirects` is emitted into `dist/` and applied automatically by Pages. Dependabot config lives in `.github/dependabot.yml`.
