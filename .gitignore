@@ -6,8 +6,7 @@ dist/
 # dependencies
 node_modules/
 
-# aube is the package manager (lockfile: aube-lock.yaml); ignore pnpm-compatible artifacts
-pnpm-lock.yaml
+# aube is the package manager and maintains the pnpm-compatible lockfile
 pnpm-workspace.yaml
 
 # logs
