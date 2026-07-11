@@ -4,12 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal static website for itochan (itochan.jp), built with [Astro](https://astro.build/) v6. Pages are `.astro` components, styles in plain CSS. The package manager is [aube](https://aube.en.dev) (`aubr` = `aube run`, `aubx` = `aube dlx`); the lockfile is `aube-lock.yaml`.
+Personal static website for itochan (itochan.jp), built with [Astro](https://astro.build/) v6. Pages are `.astro` components, styles in plain CSS. The package manager is [aube](https://aube.jdx.dev) (`aubr` = `aube run`, `aubx` = `aube dlx`); aube maintains the pnpm v9-compatible `pnpm-lock.yaml` lockfile.
 
 ## Commands
 
 ```sh
-aube install     # install dependencies (lockfile: aube-lock.yaml)
+aube install     # install dependencies (lockfile: pnpm-lock.yaml)
 aubr dev         # local dev server (http://localhost:4321), HMR
 aubr build       # build static site into dist/ (asset hashing built in)
 aubr preview     # serve the built dist/ locally
@@ -35,7 +35,7 @@ When adding a page, create `src/pages/<name>.astro` importing `Layout`; link it 
 
 Deployed via Cloudflare Pages (Git integration: push to `master` → auto build), served at the custom domain in `CNAME` (itochan.jp). The deploy is configured in the Cloudflare dashboard, not in this repo:
 
-- **Build command**: `npm install -g --ignore-scripts=false @endevco/aube && aube ci && aube run build` (installs aube in CI, then clean-installs from `aube-lock.yaml` and builds)
+- **Build command**: `npm install -g --ignore-scripts=false @endevco/aube && aube ci && aube run build` (installs aube in CI, then clean-installs from `pnpm-lock.yaml` and builds)
 - **Build output directory**: `dist`
 
 `public/_redirects` is emitted into `dist/` and applied automatically by Pages. Dependabot config lives in `.github/dependabot.yml`.
